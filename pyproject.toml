@@ -1,0 +1,14 @@
+[project]
+name = "test-dishka"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "black>=26.5.1",
+    "dishka>=1.10.1",
+    "fastapi>=0.141.1",
+    "loguru>=0.7.3",
+    "prometheus-client>=0.26.0",
+    "pydantic-settings[yaml]>=2.15.0",
+    "uvicorn>=0.53.0",
+]

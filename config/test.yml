@@ -1,0 +1,14 @@
+logging:
+  level: DEBUG
+
+  to_file: false
+  colorize: false
+  enqueue: false
+
+server:
+  host: 127.0.0.1
+  port: 5001
+  workers: 1
+  reload: false
+  docs_enabled: true
+  log_level: WARNING

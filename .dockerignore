@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project specific
+*.bak
+*.tmp
+
+# Logs
+logs/
+*.log
+
+# Git
+.gitignore
+.git/

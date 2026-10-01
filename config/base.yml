@@ -1,0 +1,24 @@
+logging:
+  level: INFO
+  to_file: true
+  path: logs
+  file_name: app.log
+  rotation: 1 day
+  retention: 14 days
+  colorize: true
+  enqueue: true
+  disabled_loggers:
+    - httpx
+    - httpcore
+    - asyncio
+
+
+server:
+  host: 127.0.0.1
+  port: 5000
+  workers: 1
+  root_path: ""
+  log_level: INFO
+  reload: false
+  docs_enabled: true
+  timezone: Europe/Moscow

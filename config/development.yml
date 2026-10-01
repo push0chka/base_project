@@ -1,0 +1,11 @@
+logging:
+  level: DEBUG
+  colorize: true
+
+server:
+  host: 127.0.0.1
+  port: 5000
+  workers: 1
+  reload: true
+  docs_enabled: true
+  log_level: DEBUG
