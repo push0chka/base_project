@@ -46,8 +46,6 @@ repos:
         exclude: |
             (?x)^(
                 \.pre-commit-config\.yaml|
-                test/manual/aaa_socket.py|
-                test/manual/ws_socket.py|
             )$
 
     -   id: no-print-statements
