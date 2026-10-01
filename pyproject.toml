@@ -8,6 +8,7 @@ dependencies = [
     "dishka>=1.10.1",
     "fastapi>=0.141.1",
     "loguru>=0.7.3",
+    "pre-commit>=4.6.2",
     "prometheus-client>=0.26.0",
     "pydantic-settings[yaml]>=2.15.0",
     "uvicorn>=0.53.0",
