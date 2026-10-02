@@ -7,9 +7,24 @@ dependencies = [
     "black>=26.5.1",
     "dishka>=1.10.1",
     "fastapi>=0.141.1",
+    "httpx2>=2.13.1",
     "loguru>=0.7.3",
     "pre-commit>=4.6.2",
     "prometheus-client>=0.26.0",
     "pydantic-settings[yaml]>=2.15.0",
+    "pytest>=9.1.1",
     "uvicorn>=0.53.0",
 ]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "pytest-cov>=7.1.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "-ra"

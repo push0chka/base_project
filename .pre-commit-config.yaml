@@ -53,3 +53,10 @@ repos:
         language: pygrep
         entry: 'print\('
         types: [python]
+
+    -   id: pytest
+        name: Run tests
+        entry: uv run pytest
+        language: system
+        pass_filenames: false
+        types: [python]
