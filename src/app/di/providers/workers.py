@@ -2,9 +2,9 @@ from collections.abc import Sequence
 
 from dishka import Provider, Scope, collect, provide
 
-from src.core.logging import Logger
-from src.core.workers import Worker
-from src.lib.workers.test_worker import TestWorker
+from src.core.shared.logging import Logger
+from src.core.shared.workers import Worker
+from src.core.shared.workers.test_worker import TestWorker
 
 
 class WorkerProvider(Provider):

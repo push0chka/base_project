@@ -22,3 +22,13 @@ server:
   reload: false
   docs_enabled: true
   timezone: Europe/Moscow
+
+
+database:
+  host: localhost
+  port: 5432
+  user: postgres
+  name: test
+  echo: false
+  pool_size: 10
+  max_overflow: 20

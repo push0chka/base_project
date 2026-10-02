@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 
-from src.core.entities.user import User
+from src.core.domains.user.schemas import User
 
 
 class CreateUserRequest(BaseModel):

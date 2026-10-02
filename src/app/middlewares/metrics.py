@@ -3,7 +3,7 @@ from collections.abc import Iterable
 
 from starlette.types import ASGIApp, Message, Receive, Scope, Send
 
-from src.core.metrics import HttpMetrics
+from src.core.shared.metrics import HttpMetrics
 
 
 class MetricsMiddleware:

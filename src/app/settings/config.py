@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, ConfigDict
 
 
 class LoggingSettings(BaseModel):
@@ -38,6 +38,21 @@ class ServerSettings(BaseModel):
     timezone: str = "Europe/Moscow"
 
 
+class DatabaseSettings(BaseModel):
+    model_config = ConfigDict(frozen=True, extra="forbid")
+
+    host: str = "localhost"
+    port: int = Field(default=5432, gt=0, lt=65536)
+    user: str = "postgres"
+    name: str
+    echo: bool = False
+    pool_size: int = Field(default=10, gt=0)
+    max_overflow: int = Field(default=20, ge=0)
+
+
 class ConfigSettings(BaseModel):
+    model_config = ConfigDict(frozen=True, extra="forbid")
+
     logging: LoggingSettings
     server: ServerSettings
+    database: DatabaseSettings

@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
-from src.core.logging import Logger
-from src.core.metrics import HttpMetrics
+from src.core.shared.logging import Logger
+from src.core.shared.metrics import HttpMetrics
 from src.app.middlewares.metrics import MetricsMiddleware
 from src.app.middlewares.request_context import RequestContextMiddleware
 

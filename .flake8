@@ -1,5 +1,5 @@
 [flake8]
 exclude =
     alembic,venv,alembic-app-info,media,.venv
-ignore =
-    W503, F821, F722, E203, E402
+extend-ignore =
+    W503, F821, F722, E203, E402, E704, E701

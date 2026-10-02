@@ -5,8 +5,8 @@ from dishka import AsyncContainer
 from fastapi import FastAPI
 
 from src.app.settings import AppSettings
-from src.core.logging import Logger
-from src.core.workers import Worker
+from src.core.shared.logging import Logger
+from src.core.shared.workers import Worker
 
 
 def create_lifespan(container: AsyncContainer):

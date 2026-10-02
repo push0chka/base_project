@@ -1,22 +1,17 @@
 from dishka import Provider, Scope, alias, provide
 
 from src.app.settings import AppSettings
-from src.core.logging import Logger
-from src.lib.logging.config import LoguruConfig, configure_loguru
-from src.lib.logging.loguru_logger import LoguruLogger
+from src.core.shared.logging import Logger
+from src.core.shared.logging.config import LoguruConfig, configure_loguru
+from src.core.shared.logging.loguru_logger import LoguruLogger
 
 
 class LoggingProvider(Provider):
     scope = Scope.APP
 
     @provide
-    def provide_loguru_logger(
-        self,
-        settings: AppSettings,
-    ) -> LoguruLogger:
-        logging_settings = (
-            settings.config.logging
-        )
+    def provide_loguru_logger(self, settings: AppSettings) -> LoguruLogger:
+        logging_settings = settings.config.logging
 
         configure_loguru(
             LoguruConfig(
@@ -27,15 +22,10 @@ class LoggingProvider(Provider):
                 retention=logging_settings.retention,
                 colorize=logging_settings.colorize,
                 enqueue=logging_settings.enqueue,
-                disabled_loggers=(
-                    logging_settings.disabled_loggers
-                ),
+                disabled_loggers=(logging_settings.disabled_loggers),
             )
         )
 
         return LoguruLogger()
 
-    logger = alias(
-        source=LoguruLogger,
-        provides=Logger,
-    )
+    logger = alias(source=LoguruLogger, provides=Logger)

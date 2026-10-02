@@ -3,9 +3,9 @@ import pytest
 from src.app.di.container import create_container
 from src.app.settings import AppSettings
 from src.app.settings.environment import Environment
-from src.core.logging import Logger
-from src.core.metrics import HttpMetrics
-from src.core.services.user import UserService
+from src.core.shared.logging import Logger
+from src.core.shared.metrics import HttpMetrics
+from src.core.domains.user.service import UserService
 
 
 @pytest.mark.asyncio

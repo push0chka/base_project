@@ -1,7 +1,7 @@
 import asyncio
 from typing import Any
 
-from src.core.workers import Worker
+from src.core.shared.workers import Worker
 
 
 class TestWorker(Worker):

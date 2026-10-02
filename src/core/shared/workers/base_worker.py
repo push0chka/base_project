@@ -3,8 +3,8 @@ from abc import abstractmethod, ABC
 from asyncio import Task
 from typing import Any
 
-from src.core.logging.logger import Logger
-from src.core.types.errors import IsError
+from src.core.shared.logging.base_logger import Logger
+from src.core.shared.types.errors import IsError
 
 
 class Worker(ABC):

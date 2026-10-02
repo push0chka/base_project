@@ -3,8 +3,8 @@ from uuid import uuid4
 
 import pytest
 
-from src.core.entities.user import User
-from src.core.services.user import UserService
+from src.core.domains.user.schemas import User
+from src.core.domains.user.service import UserService
 
 
 class FakeLogger:

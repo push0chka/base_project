@@ -28,6 +28,10 @@ def load_config(environment: Environment) -> ConfigSettings:
     return ConfigSettings.model_validate(data)
 
 
+def load_secrets() -> SecretSettings:
+    return SecretSettings()  # type: ignore[call-arg]
+
+
 class AppSettings(BaseModel):
     model_config = ConfigDict(frozen=True, extra="forbid")
 
@@ -40,5 +44,5 @@ def load_settings(environment: Environment) -> AppSettings:
     return AppSettings(
         environment=environment,
         config=load_config(environment),
-        secrets=SecretSettings(),
+        secrets=load_secrets(),
     )

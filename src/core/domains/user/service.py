@@ -1,8 +1,8 @@
 from uuid import UUID, uuid4
 
-from src.core.entities.user import User
-from src.core.logging.logger import Logger
-from src.core.repositories import UserRepository
+from src.core.domains.user.schemas import User
+from src.core.shared.logging.base_logger import Logger
+from src.core.domains.user.repo import UserRepository
 
 
 class UserService:

@@ -4,7 +4,7 @@ from uuid import uuid4
 from starlette.datastructures import Headers, MutableHeaders
 from starlette.types import ASGIApp, Message, Receive, Scope, Send
 
-from src.core.logging.logger import Logger
+from src.core.shared.logging.base_logger import Logger
 
 REQUEST_ID_HEADER = "X-Request-ID"
 

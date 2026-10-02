@@ -1,1 +1,3 @@
-from .metadata import *
+from .metadata import API_TITLE, API_DESCRIPTION, OPENAPI_TAGS
+
+__all__ = ["API_TITLE", "API_DESCRIPTION", "OPENAPI_TAGS"]

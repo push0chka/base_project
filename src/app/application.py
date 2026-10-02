@@ -9,8 +9,8 @@ from src.app.lifespan import create_lifespan
 from src.app.middlewares.setup import setup_middlewares
 from src.app.settings.environment import Environment
 from src.app.settings import AppSettings
-from src.core.logging import Logger
-from src.core.metrics import HttpMetrics
+from src.core.shared.logging import Logger
+from src.core.shared.metrics import HttpMetrics
 
 
 def create_app(environment: Environment) -> FastAPI:
